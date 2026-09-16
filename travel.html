@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СОТКА — калькулятор расходов в поездке</title>
+<meta name="description" content="Калькулятор расходов в поездке: разделите оплату жилья, еды, билетов и других общих покупок между участниками.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://ryu-59.github.io/Sotka/travel.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%3Cdefs%3E%0A%3CradialGradient%20id%3D%22rg%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2260%25%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%237dd3ff%22%2F%3E%0A%3Cstop%20offset%3D%2270%25%22%20stop-color%3D%22%231ea3f0%22%2F%3E%0A%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230d6fc4%22%2F%3E%0A%3C%2FradialGradient%3E%0A%3C%2Fdefs%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22url%28%23rg%29%22%20stroke%3D%22%230d6fc4%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20fill%3D%22white%22%2F%3E%0A%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Arial%20Black%2CArial%2Csans-serif%22%20font-size%3D%2222%22%0Afont-weight%3D%22900%22%20fill%3D%22%23ff8c1a%22%20stroke%3D%22%23b34d00%22%20stroke-width%3D%221.5%22%0Atext-anchor%3D%22middle%22%20letter-spacing%3D%22-1%22%3E%D0%A1%D0%9E%D0%A2%D0%9A%D0%90%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Comfortaa:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0f8ff;--panel:#fff;--line:#b8d4f0;--ink:#1a2a3a;--mut:#5a7a9a;--cyan:#1ea3f0;--amber:#ff8c1a}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,#fff 0%,#e6f2ff 50%,#f0f8ff 100%);color:var(--ink);font:17px/1.65 Nunito,system-ui,sans-serif;font-weight:700}
+.wrap{max-width:900px;margin:auto;padding:24px 20px 50px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.logo{width:58px;height:58px;flex:none}
+.logo img{width:100%;height:100%}
+.brand{font:900 28px Comfortaa,sans-serif}
+.brand a{color:var(--ink);text-decoration:none}
+.tag{color:var(--mut);font-size:13px}
+article{background:rgba(255,255,255,.95);border:3px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 8px 24px rgba(30,163,240,.12)}
+h1,h2{font-family:Comfortaa,sans-serif}
+h1{font-size:clamp(26px,5vw,40px);line-height:1.2;margin:0 0 16px}
+h2{font-size:22px;margin:28px 0 10px}
+p,li{color:var(--mut)}
+a{color:var(--cyan)}
+.cta{display:inline-block;margin-top:10px;background:var(--cyan);color:#fff;text-decoration:none;padding:11px 16px;border-radius:14px;font-weight:900}
+nav{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+nav a{border:2px solid var(--cyan);padding:7px 10px;border-radius:12px;text-decoration:none;font-weight:900;background:#fff}
+nav a:hover{background:var(--cyan);color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%3Cdefs%3E%0A%3CradialGradient%20id%3D%22rg%22%20cx%3D%2250%25%22%20cy%3D%2240%25%22%20r%3D%2260%25%22%3E%0A%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%237dd3ff%22%2F%3E%0A%3Cstop%20offset%3D%2270%25%22%20stop-color%3D%22%231ea3f0%22%2F%3E%0A%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230d6fc4%22%2F%3E%0A%3C%2FradialGradient%3E%0A%3C%2Fdefs%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2247%22%20fill%3D%22url%28%23rg%29%22%20stroke%3D%22%230d6fc4%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20fill%3D%22white%22%2F%3E%0A%3Ctext%20x%3D%2250%22%20y%3D%2258%22%20font-family%3D%22Arial%20Black%2CArial%2Csans-serif%22%20font-size%3D%2222%22%0Afont-weight%3D%22900%22%20fill%3D%22%23ff8c1a%22%20stroke%3D%22%23b34d00%22%20stroke-width%3D%221.5%22%0Atext-anchor%3D%22middle%22%20letter-spacing%3D%22-1%22%3E%D0%A1%D0%9E%D0%A2%D0%9A%D0%90%3C%2Ftext%3E%0A%3C%2Fsvg%3E" alt="СОТКА"></div>
+  <div><div class="brand"><a href="index.html">СОТКА</a></div><div class="tag">верни сотку · честный расчёт общих расходов</div></div>
+</header>
+<article>
+  <h1>Калькулятор расходов в поездке</h1>
+  <p>«СОТКА» помогает быстро разобраться с общими расходами во время путешествия. Неважно, кто оплачивал отель, продукты, такси или билеты — внесите расходы и получите понятный итог.</p>
+  <h2>Как считать расходы в путешествии?</h2><p>Добавьте всех участников поездки и последовательно внесите общие траты. Для каждого расхода укажите сумму, плательщика и участников, между которыми нужно разделить оплату.</p>
+<h2>Как понять, кто кому должен?</h2><p>После добавления расходов калькулятор сводит платежи и доли участников. В итогах отображается баланс и список переводов, которые помогают закрыть общий счёт.</p>
+<h2>Если один человек оплатил больше остальных</h2><p>Это нормальная ситуация для путешествий. «СОТКА» учитывает фактического плательщика отдельно от того, на кого распределяется расход.</p>
+  <a class="cta" href="index.html">Открыть калькулятор «СОТКА»</a>
+  <nav aria-label="Другие страницы">
+    <a href="travel.html">Поездка</a>
+    <a href="friends.html">Друзья</a>
+    <a href="couples.html">Пары</a>
+    <a href="party.html">Вечеринка</a>
+  </nav>
+</article>
+</div>
+</body>
+</html>
